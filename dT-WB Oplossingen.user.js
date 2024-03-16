@@ -46,7 +46,8 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>De oplossingen voor je oefening:</h1>
+  <h1>bjeelaa's oplossingenverklapper</h1>
+  <h2>De oplossingen voor je oefening:</h2>
 `;
 
             for (var k = 0; k < keys.length; k++) {
