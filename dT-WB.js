@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         HTTP Request Analyzer
-// @namespace    http://your.namespace.com
+// @name         Oplossingenverklapper voor digiTAAL Werkboek
+// @namespace    https://github.com/bjeelaa/JS.digiTAALwb
 // @version      1.0
-// @description  Analyze HTTP requests and responses
-// @author       Your Name
-// @match        https://example.com/*
+// @description  Dit scriptje geeft je de juiste antwoorden op oefeningen op het digiTAAL Werkboek platform
+// @author       bzh
+// @match        https://www.explio.com/digwb/*
 // @grant        none
 // ==/UserScript==
 
