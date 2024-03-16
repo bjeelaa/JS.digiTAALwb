@@ -18,7 +18,9 @@
         this.addEventListener('load', function() {
             console.log('HTTP Response:', this.status, this.responseText);
             var rawResponseBody = this.responseText;
-            var parsedBody = JSON.parse(rawResponseBody)
+            var parsedBody = JSON.parse(rawResponseBody);
+            var definition = parsedBody.definition;
+            console.log(definition);
         });
         origOpen.apply(this, arguments);
     };
