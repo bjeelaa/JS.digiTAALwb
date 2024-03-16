@@ -14,10 +14,18 @@
     // Intercept XMLHttpRequest
     var origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function(method, url) {
-        console.log('HTTP Request:', method, url);
+        var requestDetails = 'HTTP Request:\n\n' + method + ' ' + url;
+        var requestWindow = window.open('', '_blank');
+        requestWindow.document.write('<pre>' + requestDetails + '</pre>');
+        requestWindow.document.close();
+
         this.addEventListener('load', function() {
-            console.log('HTTP Response:', this.status, this.responseText);
+            var responseDetails = 'HTTP Response:\n\n' + this.status + ' ' + this.responseText;
+            var responseWindow = window.open('', '_blank');
+            responseWindow.document.write('<pre>' + responseDetails + '</pre>');
+            responseWindow.document.close();
         });
+
         origOpen.apply(this, arguments);
     };
 })();
