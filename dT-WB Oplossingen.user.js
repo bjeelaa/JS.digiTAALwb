@@ -13,7 +13,6 @@
 (function () {
     'use strict';
 
-    console.log(pako);
     function decodeData(encodedData) {
         return pako.ungzip(atob(encodedData), { "to": "string" });
     }
@@ -21,25 +20,20 @@
     // Intercept XMLHttpRequest
     var origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url) {
-        console.log('HTTP Request:', method, url);
         this.addEventListener('load', function () {
-            console.log('HTTP Response:', this.status, this.responseText);
             var rawResponseBody = this.responseText;
             var parsedBody = JSON.parse(rawResponseBody);
             var definition = parsedBody.definition;
-            console.log(definition);
             var decodedDefinition = decodeData(definition);
-            console.log(decodedDefinition);
             var parsedDefinition = JSON.parse(decodedDefinition);
-            console.log(parsedDefinition);
             var items = parsedDefinition.items;
             console.log(items);
             var keys = Object.keys(items);
             console.log(keys);
 
             for (var i = 0; i < keys.length; i++) {
-                if (keys[i].length != 36) {
-                    keys.splice(i, i);
+                if (!items[keys[i]].options) {
+                    keys.splice(i, 1);
                 };
             };
             console.log(keys);
