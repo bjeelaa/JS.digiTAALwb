@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name         Oplossingenverklapper voor digiTAAL Werkboek
-// @namespace    https://github.com/bjeelaa/JS.digiTAALwb
-// @version      1.0
-// @description  Dit scriptje geeft je de juiste antwoorden op oefeningen op het digiTAAL Werkboek platform
-// @author       bzh
-// @match        https://www.explio.com/digwb/*
-// @grant        none
+// @name            Oplossingenverklapper voor digiTAAL Werkboek
+// @namespace       https://github.com/bjeelaa/JS.digiTAALwb
+// @version         1.0
+// @description     Dit scriptje geeft je de juiste antwoorden op oefeningen op het digiTAAL Werkboek platform
+// @author          bjeelaa
+// @license         MIT
+// @icon            https://raw.githubusercontent.com/bjeelaa/bjeelaa.github.io/master/favicon.ico
+// @match           https://www.explio.com/digwb/*
+// @grant           none
 // ==/UserScript==
 
 (function () {
