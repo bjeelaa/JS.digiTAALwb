@@ -30,6 +30,11 @@
             console.log(decodedDefinition);
             var parsedDefinition = JSON.parse(decodedDefinition);
             console.log(parsedDefinition);
+            var items = parsedDefinition.items;
+            console.log(items);
+            var keys = Object.keys(items);
+            console.log(keys[0]);
+            
         });
         origOpen.apply(this, arguments);
     };
