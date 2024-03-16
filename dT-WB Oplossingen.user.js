@@ -43,6 +43,7 @@
 <html>
 <head>
   <title>Oplossingen</title>
+  <meta charset="UTF-8">
 </head>
 <body>
   <h1>De oplossingen voor je oefening:</h1>
