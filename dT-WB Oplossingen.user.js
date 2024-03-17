@@ -3,7 +3,7 @@
 // @namespace       https://github.com/bjeelaa/JS.digiTAALwb
 // @version         1.0
 // @description     Dit scriptje geeft je de juiste antwoorden op oefeningen op het digiTAAL Werkboek platform
-// @author          bjeelaa
+// @author          bzh
 // @license         MIT
 // @icon            https://raw.githubusercontent.com/bjeelaa/bjeelaa.github.io/master/favicon.ico
 // @match           https://www.explio.com/digwb/*
@@ -46,7 +46,6 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>bjeelaa's oplossingenverklapper</h1>
   <h2>De oplossingen voor je oefening:</h2>
 `;
 
