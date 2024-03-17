@@ -44,6 +44,11 @@
 <head>
   <title>Oplossingen</title>
   <meta charset="UTF-8">
+  <style>
+    p, button {
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
   <h2>De oplossingen voor je oefening:</h2>
@@ -58,10 +63,22 @@
                         break;
                     };
                 };
-                htmlContent = htmlContent + '  <p>' + (k+1).toString() + '. ' + answer + `</p>
+                htmlContent = htmlContent + '  <p id="' + k + '">' + (k+1).toString() + '. ' + answer + `</p> <button onclick="copyText('` + k + `')">Kopieer</button><br/>
 `;
             };
-            htmlContent = htmlContent + `</body>
+            htmlContent = htmlContent + `<script>
+    function copyText(id) {
+      var paragraph = document.getElementById(id);
+      var text = paragraph.textContent;
+      var index = 0;
+      while (index < text.length && !isNaN(parseInt(text[index]))) {
+        index++;
+      };
+      var newText = text.slice(index+1).trim();
+      navigator.clipboard.writeText(newText);
+    };
+  </script>
+</body>
 </html>`;
             console.log(htmlContent);
             var blob = new Blob([htmlContent], { type: 'text/html' });
