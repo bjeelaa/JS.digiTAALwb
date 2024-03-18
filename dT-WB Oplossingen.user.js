@@ -22,10 +22,15 @@
     XMLHttpRequest.prototype.open = function (method, url) {
         this.addEventListener('load', function () {
             var rawResponseBody = this.responseText;
+            console.log(rawResponseBody);
             var parsedBody = JSON.parse(rawResponseBody);
+            console.log(parsedBody);
             var definition = parsedBody.definition;
+            console.log(definition);
             var decodedDefinition = decodeData(definition);
+            console.log(decodedDefinition);
             var parsedDefinition = JSON.parse(decodedDefinition);
+            console.log(parsedDefinition);
             var items = parsedDefinition.items;
             console.log(items);
             var keys = Object.keys(items);
@@ -36,7 +41,6 @@
                     keys.splice(i, 1);
                 };
             };
-            console.log(keys);
 
             var htmlContent = `
 <!DOCTYPE html>
