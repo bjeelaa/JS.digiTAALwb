@@ -83,8 +83,7 @@
             console.log(htmlContent);
             var blob = new Blob([htmlContent], { type: 'text/html' });
             var url = URL.createObjectURL(blob);
-            window.open(url, '_blank');
-            // , 'width=600,height=600'
+            window.open(url, '_blank', 'width=600,height=600');
             URL.revokeObjectURL(url);
         });
         origOpen.apply(this, arguments);
